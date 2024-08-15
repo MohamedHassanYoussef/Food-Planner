@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:icon="@drawable/home_icons8"
+        android:title="@string/home" />
+    <item
+
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/search_icons"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/favoriteFragment"
+        android:icon="@android:drawable/btn_star"
+        android:title="@string/favorite" />
+    <item
+
+        android:icon="@drawable/calendar_icon"
+        android:title="@string/calender"
+        android:id="@+id/calenderFragment"/>
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myfoodplaner.home.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_">
+        <action
+            android:id="@+id/action_homeFragment_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealDetailsFragment"
+        android:name="com.example.myfoodplaner.mealdetail.view.MealDetailsFragment"
+        android:label="Meal Details"
+        tools:layout="@layout/fragment_meal_details" >
+        <argument
+            android:name="no"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.myfoodplaner.category.view.CategoryFragment"
+        android:label="Meals"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_listDetailFragment"
+            app:destination="@id/listDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.myfoodplaner.favorite.view.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.example.myfoodplaner.weekplan.view.CalenderFragment"
+        android:label="Calender"
+        tools:layout="@layout/fragment_calender">
+        <action
+            android:id="@+id/action_calenderFragment_to_listDetailFragment"
+            app:destination="@id/listDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listDetailFragment"
+        android:name="com.example.myfoodplaner.listsdetail.view.ListDetailFragment"
+        android:label="Meals"
+        tools:layout="@layout/fragment_list_detail" />
+    <fragment
+        android:id="@+id/categoriesSearchFragment"
+        android:name="com.example.myfoodplaner.search.view.categorysearch.CategoriesSearchFragment"
+        android:label="categories"
+        tools:layout="@layout/fragment_categories_search" />
+    <fragment
+        android:id="@+id/countrySearchFragment"
+        android:name="com.example.myfoodplaner.search.view.countrysearch.CountrySearchFragment"
+        android:label="Country"
+        tools:layout="@layout/fragment_country_search" />
+    <fragment
+        android:id="@+id/ingredientsSearchFragment"
+        android:name="com.example.myfoodplaner.search.view.ingredientsearch.IngredientsSearchFragment"
+        android:label="Ingredients" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.myfoodplaner.search.view.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+</navigation>
